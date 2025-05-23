@@ -1,0 +1,2 @@
+./*.safetensors
+#ignoring due to 100 MB file size limits and loras are > 100 MB
