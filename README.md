@@ -17,7 +17,7 @@ A few gotchas that might not be immediately evident are listed below:
 3. Random Number generation does not follow the pytorch sense, and needs a couple of different methods to set a global PRNG seed and then work from there. I like Pytorch's api better for this, even though MLX seems to be lower level.
 
 ### Speed
-Here are my __non scientific__ benchmarks. In a sort of practical application I think there's a _rule of tenths_ that applies. CPU = 10x MLX = 10x CUDA roughly in terms of inference times. However, having 
+Here are my __non scientific__ benchmarks. In a sort of practical application I think there's a _rule of tenths_ that applies. CPU = 10x MLX = 10x CUDA roughly in terms of inference times. However, having MLX allows for much faster prototyping on even a moderately powerful Macbook, better than taking up expensive GPU time. I just wish translation from MLX to Pytorch and the reverse was easier. 
 
 ### Text to Image
 | Device               | Steps | Inference Time |
