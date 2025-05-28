@@ -1,0 +1,6 @@
+ipykernel==6.29.5
+mlx==0.25.2
+regex==2024.11.6
+safetensors==0.5.3
+torchvision==0.22.0
+tqdm==4.67.1
