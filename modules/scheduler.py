@@ -3,7 +3,7 @@ import numpy as np
 
 class EulerAncestralSampler:
     def __init__(self, num_training_steps=1000, beta_start: float = 0.00085, beta_end: float = 0.0120):
-        # Initialize diffusion parameters
+        # These params are as in the original paper. I dont really know what these mean feel free to open an issue if anything seems off.
         self.betas = mx.linspace(beta_start ** 0.5, beta_end ** 0.5, num_training_steps, dtype=mx.float32) ** 2
         self.alphas = 1.0 - self.betas
         self.alphas_cumprod = mx.cumprod(self.alphas)

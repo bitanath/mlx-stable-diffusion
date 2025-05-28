@@ -2,6 +2,8 @@ import mlx.nn as nn
 import mlx.core as mx
 
 def get_submodule(model:nn.Module, path:str):
+    #NOTE: This is required since tree flattening is not possible thanks to switching sequentials
+    # Sacrificing inbuilt functions for code cleanliness, separation of concerns and understanding
     parts = path.split('.')
     if(parts[-1] == 'weight' or parts[-1] == 'bias'):
         parts.pop()

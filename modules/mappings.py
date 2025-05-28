@@ -1,4 +1,5 @@
 #TODO: Store all LORA layer mappings here in order to merge directly into model
+#TODO: Move to a functional implementation, we are currently loading layerwise for simplicity and further experimentation
 
 simplified_clip_lora_mapping = {
   'layers.0.attention.out_proj.weight': ['lora_te_text_model_encoder_layers_0_self_attn_out_proj.lora_up.weight',

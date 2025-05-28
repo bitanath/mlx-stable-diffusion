@@ -13,7 +13,7 @@ This was also a learning opportunity for me since I am a total noob to diffusion
 ### Gotchas
 A few gotchas that might not be immediately evident are listed below:
 1. `nn.GroupNorm(groups, dims, pytorch_compatible=True)` must be marked pytorch_compatible else they work on some totally weird implementation
-2. Channels last (this effed me up so many times) for all Convolution layers means weights and input tensors need to be permuted. This also results in a non 1 to 1 translation of pytorch code, which is annoying to say the least, but is still workable for anyone that's tried interoprating between TF/Keras and Pytorch
+2. Channels last (this effed me up so many times) for all Convolution layers means weights and input tensors need to be permuted. This also results in a non 1 to 1 translation of pytorch code, which is annoying to say the least, but is still workable for anyone that's tried interoperating between TF/Keras and Pytorch
 3. Random Number generation does not follow the pytorch sense, and needs a couple of different methods to set a global PRNG seed and then work from there. I like Pytorch's api better for this, even though MLX seems to be lower level.
 
 ### Speed
@@ -23,7 +23,7 @@ Here are my __non scientific__ benchmarks. In a sort of practical application I 
 | Device               | Steps | Inference Time |
 |----------------------|-------|----------------|
 | PyTorch CPU (M1 Pro) | 50    | 645.2s         |
-| PyTorch CUDA (T4)    | 50    | 8.8s           |
+| PyTorch CUDA (L4)    | 50    | 8.8s           |
 | MLX (M1 Pro)         | 50    | 150.1s         |
 
 ### Image to Image
